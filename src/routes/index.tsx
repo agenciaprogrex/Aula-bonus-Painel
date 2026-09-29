@@ -30,40 +30,39 @@ function Index() {
   const [hasPlayed, setHasPlayed] = useState(false);
   return (
     <main className="min-h-screen bg-background">
-      <section className="mx-auto grid min-h-screen w-full max-w-7xl items-stretch lg:grid-cols-[0.92fr_1.08fr]">
-        <div className="flex flex-col justify-center px-6 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-20 xl:px-20">
-          <div className="mb-10 flex items-start gap-3 rounded-xl border border-success/20 bg-success-soft p-5 shadow-[0_12px_32px_-12px_var(--success)] sm:gap-4 sm:p-6">
+      <section className="mx-auto flex w-full max-w-4xl flex-col px-4 py-5 sm:px-8 sm:py-8 lg:py-10">
+        <div className="flex flex-col items-center text-center">
+          <div className="mb-5 flex w-full max-w-2xl items-center gap-3 rounded-xl border border-success/20 bg-success-soft p-3 text-left shadow-[0_12px_32px_-12px_var(--success)] sm:mb-6 sm:gap-4 sm:p-5">
             <span className="grid size-10 shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
               <Gift aria-hidden="true" className="size-5" />
             </span>
             <div>
-              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-success">
+              <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-success sm:text-xs">
                 Um bônus preparado para você
               </p>
-              <p className="font-display text-2xl font-bold leading-tight text-foreground sm:text-3xl">
+              <p className="font-display text-xl font-bold leading-tight text-foreground sm:text-3xl">
                 Aula especial para você dominar painel
               </p>
             </div>
           </div>
 
-          <h1 className="max-w-2xl font-display text-4xl font-bold leading-[1.08] text-foreground sm:text-5xl">
+          <h1 className="max-w-3xl font-display text-[clamp(1.75rem,7.5vw,2.5rem)] font-bold leading-[1.15] text-foreground sm:text-5xl lg:text-[3.5rem]">
             Veja como o problema no{" "}
-            <span className="block text-[1.4em] leading-none text-success">PAINEL</span> deste carro
-            foi <span className="block text-[1.4em] leading-none text-success">RESOLVIDO</span> na
-            prática
+            <span className="text-[1.18em] leading-none text-success">PAINEL</span> deste carro foi{" "}
+            <span className="text-[1.18em] leading-none text-success">RESOLVIDO</span> na prática
           </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
+          <p className="mt-3 max-w-2xl text-sm leading-5 text-muted-foreground sm:mt-4 sm:text-base sm:leading-6">
             Preparei uma aula bônus direta ao ponto para você acompanhar, na prática, o diagnóstico
             e a solução de um defeito real.
           </p>
 
-          <div className="mt-8 grid max-w-xl gap-3 border-l-4 border-success bg-success-soft px-5 py-5">
-            <div className="flex items-center gap-3">
+          <div className="mt-3 grid gap-1.5 text-left text-xs sm:mt-4 sm:grid-cols-2 sm:gap-5 sm:text-sm">
+            <div className="flex items-center gap-2">
               <CheckCircle2 aria-hidden="true" className="size-5 shrink-0 text-success" />
               <p className="font-semibold text-foreground">Problema do painel identificado</p>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <CheckCircle2 aria-hidden="true" className="size-5 shrink-0 text-success" />
               <p className="font-semibold text-foreground">Solução mostrada passo a passo</p>
             </div>
@@ -71,17 +70,14 @@ function Index() {
 
           <a
             href="#aula"
-            className="mt-8 inline-flex min-h-12 w-fit items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-workshop transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            className="mt-4 inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-workshop transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
           >
             Assistir à aula agora
             <ArrowRight aria-hidden="true" className="size-5" />
           </a>
         </div>
 
-        <div
-          id="aula"
-          className="relative flex flex-col justify-center gap-6 bg-video p-4 sm:p-8 lg:p-10 xl:p-14"
-        >
+        <div id="aula" className="relative mt-5 flex scroll-mt-4 flex-col gap-6 sm:mt-6">
           <div className="w-full overflow-hidden rounded-md border border-video-border bg-video-surface shadow-video">
             <div className="flex items-center justify-between gap-3 border-b border-video-border px-4 py-3 text-video-foreground">
               <div className="flex items-center gap-2">
